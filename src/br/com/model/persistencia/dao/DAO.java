@@ -13,10 +13,10 @@ import javax.persistence.EntityManager;
  * @author MEUS DOCUMENTOS
  */
 public interface DAO <T, I extends Serializable> {
-    
-    public T save (T entity);
-    
-    public void remove (T entity);
+    //entidade. T colocar qualquer tipo de objeto
+    public boolean save (T entity);
+    //chave primaria
+    public boolean remove (Class<T> classe, I pk);
     
     public T getById (Class<T> classe, I pk);
     

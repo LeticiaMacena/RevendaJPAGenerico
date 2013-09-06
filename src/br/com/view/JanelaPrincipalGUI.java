@@ -28,14 +28,17 @@ public class JanelaPrincipalGUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btMarca = new javax.swing.JButton();
-        btModelo = new javax.swing.JButton();
         btAutomóvel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
-        btMarca.setText("Marca");
+        btMarca.setBackground(new java.awt.Color(255, 255, 255));
+        btMarca.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btMarca.setForeground(new java.awt.Color(153, 0, 255));
+        btMarca.setText("Usuario");
         btMarca.setToolTipText("Marca");
         btMarca.setBorderPainted(false);
         btMarca.setOpaque(false);
@@ -44,17 +47,13 @@ public class JanelaPrincipalGUI extends javax.swing.JFrame {
                 btMarcaActionPerformed(evt);
             }
         });
+        jPanel1.add(btMarca);
+        btMarca.setBounds(380, 210, 120, 50);
 
-        btModelo.setText("Modelo");
-        btModelo.setBorderPainted(false);
-        btModelo.setFocusable(false);
-        btModelo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btModeloActionPerformed(evt);
-            }
-        });
-
-        btAutomóvel.setText("Automóvel");
+        btAutomóvel.setBackground(new java.awt.Color(255, 255, 255));
+        btAutomóvel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btAutomóvel.setForeground(new java.awt.Color(153, 0, 255));
+        btAutomóvel.setText("Funcao");
         btAutomóvel.setBorderPainted(false);
         btAutomóvel.setFocusable(false);
         btAutomóvel.addActionListener(new java.awt.event.ActionListener() {
@@ -62,59 +61,31 @@ public class JanelaPrincipalGUI extends javax.swing.JFrame {
                 btAutomóvelActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btAutomóvel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btAutomóvel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(btAutomóvel);
+        btAutomóvel.setBounds(220, 210, 120, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMarcaActionPerformed
-        MarcaGui ma = new MarcaGui();
+        FuncionarioGui ma = new FuncionarioGui();
         ma.setLocationRelativeTo(null);
         ma.setVisible(true);
     }//GEN-LAST:event_btMarcaActionPerformed
 
-    private void btModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btModeloActionPerformed
-        ModeloGui mo = new ModeloGui();
-        mo.setLocationRelativeTo(null);
-        mo.setVisible(true);
-    }//GEN-LAST:event_btModeloActionPerformed
-
     private void btAutomóvelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAutomóvelActionPerformed
-        AutomovelGui au = new AutomovelGui();
+        FuncaoGui au = new FuncaoGui();
         au.setLocationRelativeTo(null);
         au.setVisible(true);
     }//GEN-LAST:event_btAutomóvelActionPerformed
@@ -126,7 +97,6 @@ public class JanelaPrincipalGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAutomóvel;
     private javax.swing.JButton btMarca;
-    private javax.swing.JButton btModelo;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

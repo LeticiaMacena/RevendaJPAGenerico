@@ -17,8 +17,8 @@ public class Validadores {
     }
 
 
-    public static boolean verificaAno(String texto) {
-        if (texto.length() != 4) {
+    public static boolean verificaNome(String texto) {
+        if (texto.length() != 0) {
             return false;
         } else {
             for (char letra : texto.toCharArray()) {
